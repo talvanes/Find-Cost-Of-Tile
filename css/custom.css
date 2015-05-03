@@ -31,4 +31,4 @@ body {
 }
 
 /* For output control */
-output[name=total] { text-align: right }
+#total { text-align: right }
