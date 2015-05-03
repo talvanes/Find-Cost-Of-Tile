@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cost of Tile (to Cover WxH Floor)</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom formatting -->
+    <link href="css/custom.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container-fluid">
+    	<h1 class="page-header">Cost of Tile</h1>
+    	<p class="lead">Find the cost of tile to cover a WxH (width per height) floor:</p>
+    	<!-- A grid: form controls on the left and the output on the right -->
+    	<div class="row">
+    		<!-- A set of form controls -->
+    		<div class="col-md-6">
+    			<form class="form-horizontal" id="costPerTileForm">
+						<div class="form-group">
+							<label for="width" class="col-sm-7 control-label">Width</label>
+							<div class="col-sm-5">
+								<div class="input-group">
+									<input type="number" class="form-control" id="width" min="0" step="0.01" aria-describedby="width-m"/>
+									<span class="input-group-addon" id="width-m">m</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="height" class="col-sm-7 control-label">Height</label>
+							<div class="col-sm-5">
+								<div class="input-group">
+									<input type="number" class="form-control" id="height" min="0" step="0.01" aria-describedby="height-m"/>
+									<span class="input-group-addon" id="height-m">m</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="height" class="col-sm-7 control-label" title="Cost per square meter">Cost per sq meter</label>
+							<div class="col-sm-5">
+								<div class="input-group">
+									<span class="input-group-addon" id="cost-per-m2">$</span>
+									<input type="number" class="form-control" id="cost" min="0.01" step="0.01" aria-describedby="cost-per-m2"/>
+								</div>
+							</div>
+						</div>
+					</form>
+    		</div>
+    		<!-- Calculation output -->
+    		<div class="col-md-6">
+    			<output name="total" class="custom-group" for="width height cost" form="costPerTileForm">$ 0.00</output>
+    		</div>
+    	</div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Custom routines for our program -->
+    <script src="js/main.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
